@@ -1,7 +1,7 @@
 import React from "react";
 import scissor from "../assets/icon-scissors.svg";
 
-const YouPicked = ({ userPicked }) => {
+const YouPicked = ({ userPicked, randomRPS }) => {
   return (
     <div className="mx-auto my-10 flex gap-20">
       <div className="text-white gap-12 items-center flex flex-col">
@@ -19,9 +19,15 @@ const YouPicked = ({ userPicked }) => {
         <h4 className="font-semibold text-2xl tracking-widest">
           THE HOUSE PICKED
         </h4>
-        <div className="h-64  w-64 flex items-center justify-center  rounded-full ">
-          <span className="h-46 bg-[#182341bb] flex items-center justify-center w-46  rounded-full">
-            <img src="" alt="" />
+        <div
+          className={`h-64  w-64 flex ${randomRPS.bgColor} items-center justify-center  rounded-full `}
+        >
+          <span
+            className={`h-46  ${randomRPS.length != 0 ? "bg-white" : "bg-[#182341bb]"} flex items-center justify-center w-46  rounded-full`}
+          >
+            {randomRPS.img && (
+              <img className="h-25" src={randomRPS.img} alt="" />
+            )}
           </span>
         </div>
       </div>
