@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
 import scissor from "../assets/icon-scissors.svg";
 
-
-const YouPicked = ({ userPicked, randomRPS, isWinner, setIsWinner }) => {
-
-
+const YouPicked = ({
+  userPicked,
+  randomRPS,
+  isWinner,
+  setIsWinner,
+  playAgain,
+  score,
+  setScore,
+}) => {
   useEffect(() => {
     if (!userPicked.img || !randomRPS.img) return;
     if (userPicked.img === randomRPS.img) {
@@ -15,10 +20,12 @@ const YouPicked = ({ userPicked, randomRPS, isWinner, setIsWinner }) => {
       (userPicked.name === "scissor" && randomRPS.name === "paper")
     ) {
       setIsWinner("user");
+      setScore((prev) => prev + 1);
     } else {
       setIsWinner("computer");
+      setScore((prev) => Math.max(prev - 1, 0));
     }
-  }, [userPicked][randomRPS]);
+  }, [userPicked.name, randomRPS.name]);
 
   return (
     <div className="mx-auto my-10 flex gap-20">
@@ -43,7 +50,7 @@ const YouPicked = ({ userPicked, randomRPS, isWinner, setIsWinner }) => {
                 : "DRAW"}
           </h3>
           <button
-            onClick={() => window.location.reload()}
+            onClick={playAgain}
             className="tracking-widest hover:text-[hsl(349,71%,52%)] hover:cursor-pointer text-[hsl(246,11%,37%)] bg-white  font-bold text-xl w-full rounded-md py-2"
           >
             PLAY AGAIN

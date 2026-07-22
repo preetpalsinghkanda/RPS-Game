@@ -5,13 +5,13 @@ import scissor from "../assets/icon-scissors.svg";
 import rock from "../assets/icon-rock.svg";
 import "../App.css";
 
-const Home = ({ setIsPicked, userPicked }) => {
+const Home = ({ setUserIsPicked, userPicked }) => {
   return (
     <div className=" flex flex-col py-32 justify-center ">
       <div className="flex  h-full  justify-center">
         <div
           onClick={() =>
-            setIsPicked({
+            setUserIsPicked({
               name : "paper",
               img: paper,
               bgColor: "bg-[hsl(230,89%,62%)]",
@@ -30,7 +30,7 @@ const Home = ({ setIsPicked, userPicked }) => {
         <img className="h-80" src={bgTriangle} alt="" />
         <div
           onClick={() =>
-            setIsPicked({
+            setUserIsPicked({
               name : "scissor" ,
               img: scissor,
               bgColor: "bg-[hsl(39,89%,49%)]",
@@ -50,7 +50,7 @@ const Home = ({ setIsPicked, userPicked }) => {
 
       <div
         onClick={() =>
-          setIsPicked({
+          setUserIsPicked({
             name : "rock" ,
             img: rock,
             bgColor: "bg-[hsl(349,71%,52%)]",

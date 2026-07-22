@@ -27,11 +27,23 @@ const App = () => {
   ];
 
   const [isRulesOpen, setIsRulesOpen] = useState(false);
-  const [userPicked, setIsPicked] = useState({});
-  const [score, setScore] = useState(0);
+  const [userPicked, setUserIsPicked] = useState({});
+  const [score, setScore] = useState(() => {
+    return Number(localStorage.getItem("score")) || 0;
+  });
   const [randomRPS, setRandomRPS] = useState({});
 
   const [isWinner, setIsWinner] = useState("");
+
+  const playAgain = () => {
+    setUserIsPicked({});
+    setRandomRPS({});
+    setIsWinner(null);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("score", score);
+  }, [score]);
 
   useEffect(() => {
     if (Object.keys(userPicked).length > 0) {
@@ -47,7 +59,7 @@ const App = () => {
       <Navbar score={score} />
       <Rules isRulesOpen={isRulesOpen} setIsRulesOpen={setIsRulesOpen} />
       {Object.keys(userPicked).length === 0 && (
-        <Home setIsPicked={setIsPicked} userPicked={userPicked} />
+        <Home setUserIsPicked={setUserIsPicked} userPicked={userPicked} />
       )}
       {Object.keys(userPicked).length > 0 && (
         <YouPicked
@@ -55,6 +67,9 @@ const App = () => {
           randomRPS={randomRPS}
           isWinner={isWinner}
           setIsWinner={setIsWinner}
+          playAgain={playAgain}
+          score={score}
+          setScore={setScore}
         />
       )}
 
