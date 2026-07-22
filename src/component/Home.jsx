@@ -5,11 +5,19 @@ import scissor from "../assets/icon-scissors.svg";
 import rock from "../assets/icon-rock.svg";
 import "../App.css";
 
-const Home = () => {
+const Home = ({ setIsPicked, userPicked }) => {
   return (
     <div className=" flex flex-col py-32 justify-center ">
       <div className="flex  h-full  justify-center">
-        <div className="paper -top-25 left-35  relative bg-[hsl(230,89%,62%)] h-52 w-52 shadow-lg flex items-center justify-center rounded-full ">
+        <div
+          onClick={() =>
+            setIsPicked({
+              img: paper,
+              bgColor: "bg-[hsl(230,89%,62%)]",
+            })
+          }
+          className="paper cursor-pointer -top-25 left-35  relative bg-[hsl(230,89%,62%)] h-52 w-52 shadow-lg flex items-center justify-center rounded-full "
+        >
           <span className="bg-[#ffffff] shadow-inner w-39 h-39 flex items-center justify-center  rounded-full">
             <img
               className="z-10  w-22 h-22 object-contain"
@@ -19,7 +27,15 @@ const Home = () => {
           </span>
         </div>
         <img className="h-80" src={bgTriangle} alt="" />
-        <div className=" relative -top-25 right-35 bg-[hsl(39,89%,49%)] h-52 w-52 shadow-lg flex items-center justify-center rounded-full ">
+        <div
+          onClick={() =>
+            setIsPicked({
+              img: scissor,
+              bgColor: "bg-[hsl(39,89%,49%)]",
+            })
+          }
+          className=" cursor-pointer relative -top-25 right-35 bg-[hsl(39,89%,49%)] h-52 w-52 shadow-lg flex items-center justify-center rounded-full "
+        >
           <span className="bg-white w-39 h-39 flex items-center justify-center  rounded-full">
             <img
               className="z-10  w-22 h-22 object-contain"
@@ -30,7 +46,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" bottom-45 mx-auto relative bg-[hsl(349,71%,52%)] h-52 w-52 shadow-lg flex items-center justify-center rounded-full ">
+      <div
+        onClick={() =>
+          setIsPicked({
+            img: rock,
+            bgColor: "bg-[hsl(349,71%,52%)]",
+          })
+        }
+        className=" cursor-pointer bottom-45 mx-auto relative bg-[hsl(349,71%,52%)] h-52 w-52 shadow-lg flex items-center justify-center rounded-full "
+      >
         <span className="bg-white w-39 h-39 flex items-center justify-center  rounded-full">
           <img className="z-10  w-22 h-22 object-contain" src={rock} alt="" />
         </span>
