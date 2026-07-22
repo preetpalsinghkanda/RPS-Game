@@ -12,6 +12,7 @@ const Home = ({ setIsPicked, userPicked }) => {
         <div
           onClick={() =>
             setIsPicked({
+              name : "paper",
               img: paper,
               bgColor: "bg-[hsl(230,89%,62%)]",
             })
@@ -30,6 +31,7 @@ const Home = ({ setIsPicked, userPicked }) => {
         <div
           onClick={() =>
             setIsPicked({
+              name : "scissor" ,
               img: scissor,
               bgColor: "bg-[hsl(39,89%,49%)]",
             })
@@ -49,6 +51,7 @@ const Home = ({ setIsPicked, userPicked }) => {
       <div
         onClick={() =>
           setIsPicked({
+            name : "rock" ,
             img: rock,
             bgColor: "bg-[hsl(349,71%,52%)]",
           })

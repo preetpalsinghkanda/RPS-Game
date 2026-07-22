@@ -10,17 +10,17 @@ import scissor from "./assets/icon-scissors.svg";
 const App = () => {
   const RPS = [
     {
-      name: "Paper",
+      name: "paper",
       img: paper,
       bgColor: "bg-[hsl(230,89%,62%)]",
     },
     {
-      name: "Rock",
+      name: "rock",
       img: rock,
       bgColor: "bg-[hsl(349,71%,52%)]",
     },
     {
-      name: "Scissor",
+      name: "scissor",
       img: scissor,
       bgColor: "bg-[hsl(39,89%,49%)]",
     },
@@ -30,6 +30,8 @@ const App = () => {
   const [userPicked, setIsPicked] = useState({});
   const [score, setScore] = useState(0);
   const [randomRPS, setRandomRPS] = useState({});
+
+  const [isWinner, setIsWinner] = useState("");
 
   useEffect(() => {
     if (Object.keys(userPicked).length > 0) {
@@ -48,7 +50,12 @@ const App = () => {
         <Home setIsPicked={setIsPicked} userPicked={userPicked} />
       )}
       {Object.keys(userPicked).length > 0 && (
-        <YouPicked userPicked={userPicked} randomRPS={randomRPS} />
+        <YouPicked
+          userPicked={userPicked}
+          randomRPS={randomRPS}
+          isWinner={isWinner}
+          setIsWinner={setIsWinner}
+        />
       )}
 
       <button
