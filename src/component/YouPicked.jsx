@@ -23,7 +23,7 @@ const YouPicked = ({ userPicked, randomRPS }) => {
           className={`h-64  w-64 flex ${randomRPS.bgColor} items-center justify-center  rounded-full `}
         >
           <span
-            className={`h-46  ${randomRPS.length != 0 ? "bg-white" : "bg-[#182341bb]"} flex items-center justify-center w-46  rounded-full`}
+            className={`h-46  ${randomRPS.img ? "bg-white" : "bg-[#182341bb]"} flex items-center justify-center w-46  rounded-full`}
           >
             {randomRPS.img && (
               <img className="h-25" src={randomRPS.img} alt="" />

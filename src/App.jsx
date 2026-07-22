@@ -32,8 +32,13 @@ const App = () => {
   const [randomRPS, setRandomRPS] = useState({});
 
   useEffect(() => {
-    setRandomRPS(RPS[Math.floor(Math.random() * RPS.length)]);
-  }, [YouPicked]);
+    if (Object.keys(userPicked).length > 0) {
+      const timer = setTimeout(() => {
+        setRandomRPS(RPS[Math.floor(Math.random() * RPS.length)]);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [userPicked]);
 
   return (
     <div className="flex  flex-col">
