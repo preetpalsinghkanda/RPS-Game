@@ -58,7 +58,7 @@ const App = () => {
     <div className="flex  flex-col">
       <Navbar score={score} />
 
-      {/* <Rules isRulesOpen={isRulesOpen} setIsRulesOpen={setIsRulesOpen} />
+      <Rules isRulesOpen={isRulesOpen} setIsRulesOpen={setIsRulesOpen} />
       {Object.keys(userPicked).length === 0 && (
         <Home setUserIsPicked={setUserIsPicked} userPicked={userPicked} />
       )}
@@ -72,7 +72,7 @@ const App = () => {
           score={score}
           setScore={setScore}
         />
-      )} */}
+      )}
 
       {/* <button
         onClick={() => setIsRulesOpen(true)}
