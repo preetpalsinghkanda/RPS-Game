@@ -6,7 +6,7 @@ const Rules = ({ isRulesOpen, setIsRulesOpen }) => {
   return (
     isRulesOpen && (
       <div className="fixed z-15 inset-0 flex justify-center items-center bg-black/50">
-        <div className="bg-white px-12 rounded-xl  flex flex-col  gap-10 py-8">
+        <div className="bg-white md:px-12 px-8 rounded-xl  flex flex-col  gap-10 md:py-8 py-6">
           <div className="flex items-center justify-between">
             <h4 className="font-bold text-3xl text-[hsl(229,25%,31%)]">
               RULES

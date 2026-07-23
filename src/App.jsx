@@ -74,15 +74,13 @@ const App = () => {
         />
       )}
 
-      {/* <button
+      <button
         onClick={() => setIsRulesOpen(true)}
         className="border-2  cursor-pointer
-       self-end mx-10 border-[#ffffff91] absolute bottom-6  tracking-widest font-semibold text-white rounded-lg px-10 py-2"
+       self-end md:mx-10 border-[#ffffff91] mx-auto my-20  md:my-0  md:absolute bottom-6  tracking-widest font-semibold text-white rounded-lg px-10 py-2"
       >
         RULES
-      </button> */}
-
-      
+      </button>
     </div>
   );
 };
