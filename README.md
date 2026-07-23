@@ -1,16 +1,48 @@
-# React + Vite
+# RPS (ROCK PAPER SCISSOR)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Rock , Paper , Scissor is a simple hand game between two players.
+both players choose rock , paper or scissors at the same time.
+the winner is decided by the RULES
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live URL 
 
-## React Compiler
+``
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the Oxlint configuration
+## RULES 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- rock always beats scissors
+- scissors beats paper
+- paper beats rock
+
+
+## HOW TO PLAY?
+
+- open game in your browser
+- choose ROCK , PAPER , SCISSORS
+- the computer will random select it's move
+- the result displayed instantly
+- if you win score will increase by 1 and if you lose score will decrease by 1 and a draw leaves score unchanged
+- play until you reach 10 score
+
+
+## SCREENSHOT
+
+
+
+
+## FEATURES 
+
+- human vs computer
+- easy to play 
+- random computer move 
+- score tracking 
+- play again option 
+- modern UI
+
+## TECK STACK
+
+- html5
+- tailwind css
+- react js
