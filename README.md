@@ -7,7 +7,7 @@ the winner is decided by the RULES
 
 ## Live URL 
 
-``
+`https://rpssss.netlify.app/`
 
 
 ## RULES 
