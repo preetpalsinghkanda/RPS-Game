@@ -29,6 +29,7 @@ the winner is decided by the RULES
 
 ## SCREENSHOT
 
+<img width="1712" height="942" alt="image" src="https://github.com/user-attachments/assets/68c97fd8-c630-4a23-a19f-671fd822bc2e" />
 
 
 
