@@ -57,7 +57,8 @@ const App = () => {
   return (
     <div className="flex  flex-col">
       <Navbar score={score} />
-      <Rules isRulesOpen={isRulesOpen} setIsRulesOpen={setIsRulesOpen} />
+
+      {/* <Rules isRulesOpen={isRulesOpen} setIsRulesOpen={setIsRulesOpen} />
       {Object.keys(userPicked).length === 0 && (
         <Home setUserIsPicked={setUserIsPicked} userPicked={userPicked} />
       )}
@@ -71,15 +72,17 @@ const App = () => {
           score={score}
           setScore={setScore}
         />
-      )}
+      )} */}
 
-      <button
+      {/* <button
         onClick={() => setIsRulesOpen(true)}
         className="border-2  cursor-pointer
        self-end mx-10 border-[#ffffff91] absolute bottom-6  tracking-widest font-semibold text-white rounded-lg px-10 py-2"
       >
         RULES
-      </button>
+      </button> */}
+
+      
     </div>
   );
 };

@@ -8,6 +8,7 @@
 }
 
 body {
+  padding: 12px;
   background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 48%, 15%));
   overflow: hidden;
 }
